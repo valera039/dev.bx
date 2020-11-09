@@ -1,13 +1,14 @@
 <?php
 
-function Read(){
-    $input = trim(fgets(STDIN));
-    if($input == 'true' || $input == 'false'){
-        $input = (bool)$input;
-    }
-    else if(is_numeric($input)){
+function Read_from_console($input){
+    if ($input === '!stop')
+        return null;
+    if($input === 'true')
+        $input = true;
+    else if($input === 'false')
+        $input = false;
+    else if(is_numeric($input))
         $input = +$input;
-    }
     else $input = (string)$input;
     return $input;
 }
