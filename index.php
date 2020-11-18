@@ -1,12 +1,7 @@
 <?php
 
-$a = 4;
-$b = 6;
+require_once 'function.php';
 
-$c = test($a, $b);
-echo $c;
-
-function test($a, $b) {
-    $c = $a + $b;
-    return $c;
-}
+getDirectionStatus('./test/');
+getDirectionStatus('Mockup/');
+getDirectionStatus('./');
