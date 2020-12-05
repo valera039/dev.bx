@@ -7,6 +7,8 @@ function getDirectionStatus($input){
     $list = ['dirs' => [$cur_dir => ['is_read' => [], 'is_write' => []]],
         'files' => [$cur_file => ['is_read' => [],'is_write' => [],'size' => []]]];
     $dir = opendir($input);
+    if ($input[strlen($input)-1] != '/')
+        $input .= '/';
     while($elem = readdir($dir))
     {
         $correct_path = $input.$elem;//вычисление правильного пути до файла или директории
@@ -16,23 +18,18 @@ function getDirectionStatus($input){
         }
         if (is_dir($correct_path))
         {
-            is_readable($correct_path) ? $list['dirs'][$elem]['is_read'] = true:
-                $list['dirs'][$elem]['is_read'] = false;
-            is_writable($correct_path) ? $list['dirs'][$elem]['is_write'] = true:
-                $list['dirs'][$elem]['is_write'] = false;
+            $list['dirs'][$elem]['is_read'] = is_readable($correct_path);
+            $list['dirs'][$elem]['is_write'] = is_writable($correct_path);
         }
         else if (is_file($correct_path))
         {
-            is_readable($correct_path) ? $list['files'][$elem]['is_read'] = true:
-                $list['files'][$elem]['is_read'] = false;
-            is_writable($correct_path) ? $list['files'][$elem]['is_write'] = true:
-                $list['files'][$elem]['is_write'] = false;
+            $list['files'][$elem]['is_read'] = is_readable($correct_path);
+            $list['files'][$elem]['is_write'] = is_writable($correct_path);
             $list['files'][$elem]['size'] = filesize($correct_path);
         }
     }
     closedir($dir);
     unset($list['dirs'][0]);
     unset($list['files'][0]);
-    var_export($list);
-    echo PHP_EOL;
+    return $list;
 }
