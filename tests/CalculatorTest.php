@@ -8,13 +8,12 @@ class CalculatorTest extends TestCase
     public function testAdd()
     {
         $calculator = new Calculator();
-		self::assertEquals(4, $calculator->add(2, 2));
+        self::assertEquals(4, $calculator->add(2, 2));
         self::assertEquals(-10, $calculator->add(-15, 5));
         self::assertEquals(67,$calculator->add(100,-33));
 	}
 
-	public function testMulti()
-    {
+	public function testMulti(){
         $calculator = new Calculator();
         self::assertEquals(8,$calculator->multiply(4,2));
         self::assertEquals(0,$calculator->multiply(4,0));

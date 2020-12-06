@@ -26,11 +26,12 @@ class Calculator
 		return $a / $b;
 	}
 
-	public function squareRoot($a){
-	    if ($a < 0)
-	    {
+	public function squareRoot($a)
+    {
+        if ($a < 0)
+        {
             throw new \InvalidArgumentException('No square root of negative number');
-	    }
+        }
         return sqrt($a);
     }
 
