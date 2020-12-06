@@ -28,11 +28,11 @@ class Calculator
 
 	public function squareRoot($a)
     {
-        if ($a < 0)
+	    if ($a < 0)
         {
             throw new \InvalidArgumentException('No square root of negative number');
         }
-        return sqrt($a);
+	    return sqrt($a);
     }
 
     public function exponentiation($a, $b)
