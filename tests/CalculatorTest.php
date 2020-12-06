@@ -5,13 +5,14 @@ require_once (__DIR__ . '/../lib/Calculator.php');
 
 class CalculatorTest extends TestCase
 {
-	public function testAdd()
-	{
-		$calculator = new Calculator();
+    public function testAdd()
+    {
+        $calculator = new Calculator();
 		self::assertEquals(4, $calculator->add(2, 2));
         self::assertEquals(-10, $calculator->add(-15, 5));
         self::assertEquals(67,$calculator->add(100,-33));
 	}
+
 	public function testMulti()
     {
         $calculator = new Calculator();
@@ -20,6 +21,7 @@ class CalculatorTest extends TestCase
         self::assertEquals(0,$calculator->multiply(0,493));
         self::assertEquals(625,$calculator->multiply(25,25));
     }
+
     public function testDevide()
     {
         $calculator = new Calculator();
@@ -28,6 +30,7 @@ class CalculatorTest extends TestCase
         self::assertEquals(0, $calculator->divide(0, 1));
 
     }
+
     public function testDivideException()
     {
         $calculator = new Calculator();
@@ -35,6 +38,7 @@ class CalculatorTest extends TestCase
         $this->expectExceptionMessage('Divider cant be a zero');
         $calculator->divide(5,0);
     }
+
     public function testSubtract()
     {
         $calculator = new Calculator();
@@ -42,6 +46,7 @@ class CalculatorTest extends TestCase
         self::assertEquals(-5,$calculator->subtract(8,13));
         self::assertEquals(0,$calculator->subtract(10,10));
     }
+
     public function testSquareRoot()
     {
         $calculator = new Calculator();
@@ -58,6 +63,7 @@ class CalculatorTest extends TestCase
         $this->expectExceptionMessage('No square root of negative number');
         $calculator->squareRoot(-5);
     }
+
     public function testExponentiation()
     {
         $calculator = new Calculator();
@@ -70,5 +76,4 @@ class CalculatorTest extends TestCase
         self::assertEquals(1,$calculator->exponentiation(0,0));
         self::assertEquals(0,$calculator->exponentiation(0,6));
     }
-
 }
