@@ -1,5 +1,4 @@
 <?php
-//Calculator.php
 
 class Calculator
 {
@@ -21,13 +20,15 @@ class Calculator
 		{
 			throw new \InvalidArgumentException('Divider cant be a zero');
 		}
-
 		return $a / $b;
 	}
 	public function squareRoot($a)
     {
-	    $a = sqrt($a);
-	    return round($a,4);
+        if ($a < 0)
+        {
+            throw new \InvalidArgumentException('No square root of negative number');
+        }
+        return sqrt($a);
     }
     public function exponentiation($a, $b)
     {
