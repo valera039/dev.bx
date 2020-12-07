@@ -1,0 +1,104 @@
+.banner{
+    min-height: 100vh;
+    min-width: 100%;
+    background: url("img/bgmoto.jpg");
+    background-size: cover;
+    z-index: 5;
+}
+
+.banner-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.46);
+    z-index: 10;
+}
+
+.banner-content{
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    z-index: 20;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 52px;
+}
+
+h4{
+    padding-top: 70px;
+}
+
+.text1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.block{
+    width: inherit;
+    height: inherit;
+    min-width: 200px;
+}
+
+.space{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.container{
+    width: 80%;
+}
+
+.text2{
+    font-size: 20px;
+    line-height: 28px;
+}
+
+h6{
+    padding-top: 60px;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.btn-dark{
+    margin-top: 10px;
+    width: inherit;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 140.62%;
+}
+
+.text3, ul{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.marg{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+

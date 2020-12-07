@@ -1,0 +1,37 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+}
+
+.bg_header{
+    background: rgba(0,0,0,0.5);
+}
+
+.butt{
+    height: 40px;
+    float: right;
+}
+
+.logo{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F2C94C;
+    float:left;
+}
+
+.nav-link{
+    font-size: 6px;
+}
+
+#a_style{
+    font-size: 14px;
+    color: white;
+}

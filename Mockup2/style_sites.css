@@ -1,0 +1,14 @@
+.pic{
+    margin-top: 50px;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img_size{
+    width: inherit;
+    height: inherit;
+    max-width: 70px;
+}
+
