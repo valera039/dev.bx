@@ -18,8 +18,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col text-left">
-                <p class="logo">TRADE</p>
+            <div class="col">
+                <p class="logo text-left">TRADE</p>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-warning butt col-12">Free trial</button>
