@@ -23,6 +23,14 @@ class Chess{
 
     public function queenTurn()
     {
+        if ($this->x1 < 1 or $this->x1>8 or
+            $this->y1 < 1 or $this->y1>8 or
+            $this->x2 < 1 or $this->x2>8 or
+            $this->y2 < 1 or $this->y2>8)
+            return $answer = "No such turn";
+        if ($this->x1 == $this->x2 and $this->y1 == $this->y2)
+            return $answer = "Same field";
+
         $diff1 = abs($this->x1 - $this->x2);
         $diff2 = abs($this->y1 - $this->y2);
         if ($this->x1 == $this->x2 or $this->y1 == $this->y2 or $diff1 == $diff2) {
@@ -97,3 +105,13 @@ $chords = [5,6,7,5];
 $chess->setCoords($chords);
 $result = $chess->queenTurn();
 assertEquals("NO",$result,"test: NO");
+
+$chords = [1,100, 2, 7];
+$chess->setCoords($chords);
+$result = $chess->queenTurn();
+assertEquals("No such turn",$result,"test: No such turn");
+
+$chords = [1, 2, 1, 2];
+$chess->setCoords($chords);
+$result = $chess->queenTurn();
+assertEquals("Same field",$result,"test: Same field");
