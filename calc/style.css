@@ -1,0 +1,26 @@
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #6a0585;
+	font-family: "Roboto Light", "SansSerif", sans-serif ;
+}
+
+.main {
+	background-color: #b728a0;
+	border-radius: 10px ;
+	box-shadow: 0 0 100px rgba(208, 33, 255, 0.5);
+	margin: auto;
+	padding: 20px;
+}
+
+#calculator, button {
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid gray;
+	font: bold 3em Impact;
+}
+#calculator {
+	width: 460px;
+	text-align: right;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="main">
+			<div>
+				<label for="calculator">
+					<input id="calculator" type="text"/>
+				</label>
+			</div>
+			<div>
+				<button onclick="pressButton('1')">1</button>
+				<button onclick="pressButton('2')">2</button>
+				<button onclick="pressButton('3')">3</button>
+				<button onclick="pressButton('*')">*</button>
+			</div>
+			<div>
+				<button onclick="pressButton('4')">4</button>
+				<button onclick="pressButton('5')">5</button>
+				<button onclick="pressButton('6')">6</button>
+				<button onclick="pressButton('-')">-</button>
+			</div>
+			<div>
+				<button onclick="pressButton('7')">7</button>
+				<button onclick="pressButton('8')">8</button>
+				<button onclick="pressButton('9')">9</button>
+				<button onclick="pressButton('+')">+</button>
+			</div>
+			<div>
+				<button onclick="clearAll()">CA</button>
+				<button onclick="pressButton('0')">0</button>
+				<button onclick="pressButton('/')">/</button>
+				<button onclick="calculate()">=</button>
+			</div>
+			<script src="script.js"></script>
+		</div>
+	</body>
+</html>
